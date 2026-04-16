@@ -672,7 +672,11 @@
                   }
 
                   setTimeout(() => {
-                    window.location.href = href;
+                    // Normalize path to avoid 301 redirect stripping port
+                    var _u = new URL(href, window.location.href);
+                    var _p = _u.pathname;
+                    if (_p && !_p.endsWith("/") && !_p.includes(".")) _p += "/";
+                    window.location.href = _u.origin + _p + _u.search + _u.hash;
                   }, 500);
                 }
               } catch (err) {
