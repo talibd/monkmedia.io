@@ -58,7 +58,7 @@
       !(function (o, c) {
         var n = c.documentElement,
           t = " w-mod-";
-        ((n.className += t + "js"),
+        ((n.className += t + "js", n.className += t + "ix3"),
           ("ontouchstart" in o ||
             (o.DocumentTouch && c instanceof DocumentTouch)) &&
             (n.className += t + "touch"));
