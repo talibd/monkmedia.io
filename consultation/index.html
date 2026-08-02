@@ -185,7 +185,7 @@
         /></a>
         <a
           id="w-node-ce8493b8-6b96-d316-6e5f-93d623b2adfd-23b2add9"
-          href="/consultation"
+          href="#lets-talk"
           aria-current="page"
           class="button header-btn w-inline-block w--current"
         >
@@ -249,7 +249,7 @@
                 <div class="menu-txt">Pricing</div></a
               >
               <a
-                href="/consultation"
+                href="#lets-talk"
                 aria-current="page"
                 class="button white rtt-1 w-inline-block w--current"
                 ><svg
@@ -368,8 +368,9 @@
                 </div>
                 <div class="form-block w-form">
                   <form
-
-                    data-name="Email Form"class="form"
+                    data-name="Email Form"
+                    class="form"
+                    data-google-sheets-form
                     data-wf-page-id="693d3de2ba49429a768ed89f"
                     data-wf-element-id="ed0d684f-a499-28d5-2266-cb5277b534f3"
                     data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"
@@ -540,12 +541,11 @@
                       <input
                         class="demo-input-field w-input"
                         maxlength="256"
-                        name="name"
-                        data-name="Name"
-                        placeholder="Your name"
+                        name="ProjectDetails"
+                        data-name="Project Details"
+                        placeholder="Tell us about your project"
                         type="text"
                         id="Message"
-                        required=""
                       />
                       <div class="demo-label">Project Details (Optional)</div>
                     </div>
@@ -732,5 +732,7 @@
         }
       });
     </script>
+    <script src="../js/google-sheets-forms.js"></script>
+    <script src="../js/lets-talk-popup.js"></script>
   </body>
 </html>

@@ -50,7 +50,8 @@
 }
 
 .s-hero.main-page{
-    background-image: radial-gradient(circle at 50% 0%,#323232, #999999, #ffffff);
+    /* background-image: radial-gradient(circle at 50% 0%,#323232, #999999, #ffffff); */
+    background: radial-gradient(at center top, #010101, #543008);
 }
 .logo{
   width: 16em;
@@ -290,10 +291,12 @@
       /* ── Client card ── */
       .gallery-card {
         position: relative;
-        height: 380px;
+        height: 300px;
         width: auto;
-        max-width: 260px;
-        min-width: 200px;
+        /* max-width: 260px;
+        min-width: 200px; */
+        max-width: 170px;
+    min-width: 185px;
         border-radius: 16px;
         overflow: hidden;
         flex-shrink: 0;
@@ -508,11 +511,12 @@
         display: flex;
         gap: 1.25em;
         width: max-content;
-        animation: reels-scroll 30s linear infinite;
+        animation: reels-scroll 110s linear infinite;
         will-change: transform;
       }
 
-      .reels-track:hover {
+      .reels-track:hover,
+      .reels-track.is-playing {
         animation-play-state: paused;
       }
 
@@ -557,6 +561,23 @@
         transform: scale(1.06);
       } */
 
+      .reel-video-iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        pointer-events: none;
+      }
+
+      .reel-video-iframe.is-interactive {
+        pointer-events: auto;
+      }
+
+      .reel-card.is-active .reel-overlay {
+        opacity: 0;
+      }
+
       .reel-overlay {
         position: absolute;
         inset: 0;
@@ -564,7 +585,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: background 0.3s ease;
+        transition: background 0.3s ease, opacity 0.3s ease;
       }
 
       .reel-card:hover .reel-overlay {
@@ -595,27 +616,6 @@
         height: 1.4em;
         margin-left: 0.15em;
       }
-
-      .reel-badge {
-        position: absolute;
-        top: 0.75em;
-        right: 0.75em;
-        display: flex;
-        align-items: center;
-        gap: 0.3em;
-        background: rgba(0,0,0,0.55);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-        color: #fff;
-        font-family: Geist, sans-serif;
-        font-size: 0.78em;
-        font-weight: 600;
-        border-radius: 2em;
-        padding: 0.3em 0.7em;
-        letter-spacing: 0.01em;
-      }
-
-
 
       .reels-fade-left,
       .reels-fade-right {
@@ -702,11 +702,19 @@
         /* left padding so first card can be centered */
         padding: 0 0;
       }
+      .list-item.white{
+        border: none;
+        padding: 0.8em 0;
+      }
+      .question{
+        padding-top: 1em;
+    padding-bottom: 1em;
+      }
 
       /* ── Individual card ── */
       .cj-card {
         flex: none;
-        width: 60em;           /* side cards */
+        width: 40em;           /* side cards */
         border-radius: 1.5em;
         overflow: hidden;
         background: #fff;
@@ -752,6 +760,17 @@
         height: 100%;
         border: none;
         display: block;
+      }
+
+      .cj-thumb-wrap video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+        object-fit: cover;
+        background: #111;
       }
 
       .cj-card.cj-active:hover .cj-thumb {
@@ -886,9 +905,216 @@
        background: var(--gray);
       }
 
+      .upperheading-wrap .icon-3d {
+        width: 12em;
+        height: 12em;
+        object-fit: contain;
+        transform: translate(-1em, -1em);
+      }
+
+      @media (max-width: 479px) {
+        .upperheading-wrap .icon-3d {
+          width: 8em;
+          height: 8em;
+          transform: translate(-0.6em, -0.6em);
+        }
+      }
+
       .radio-txt{
         white-space: nowrap;
       }
       .serv-wrap{
         flex-wrap: wrap;
+      }
+
+      /* WhatsApp testimony mosaic */
+      .wa-proof {
+        --wa-gap: 0.55em;
+        width: 100%;
+        padding: 5em 1em 4.5em;
+        color: #fff;
+        background: #171717;
+        overflow: hidden;
+      }
+
+      .wa-proof-head {
+        width: min(64em, calc(100% - 3em));
+        margin: 0 auto 2.5em;
+        text-align: center;
+      }
+
+      .wa-proof-kicker {
+        margin-bottom: 0.8em;
+        color: var(--yellow);
+        font-family: Geist, sans-serif;
+        font-size: 0.75em;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .wa-proof-title {
+        margin: 0;
+        color: #fff;
+        font-size: clamp(2.8em, 4vw, 4.4em);
+        line-height: 0.98;
+        letter-spacing: -0.055em;
+        text-wrap: balance;
+      }
+
+      .wa-proof-title span {
+        color: var(--yellow);
+        font-family: "Covered By Your Grace", sans-serif;
+        font-size: 1.25em;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+      }
+
+      .wa-proof-subtitle {
+        margin: 1em auto 0;
+        color: rgba(255, 255, 255, 0.56);
+        font-family: Geist, sans-serif;
+        font-size: 1em;
+        line-height: 1.45;
+      }
+
+      .wa-proof-grid {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-rows: repeat(3, 9.5em);
+        grid-auto-flow: row;
+        gap: var(--wa-gap);
+        width: min(100em, 100%);
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .wa-proof-tile {
+        position: relative;
+        min-width: 0;
+        margin: 0;
+        border-radius: 0.65em;
+        background: #262626;
+        overflow: hidden;
+        scroll-snap-align: start;
+        opacity: 0;
+        transform: translateY(2.5em) scale(0.985);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .wa-proof.is-visible .wa-proof-tile {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      .wa-proof.is-visible .wa-proof-tile:nth-child(3n + 2) { transition-delay: 0.08s; }
+      .wa-proof.is-visible .wa-proof-tile:nth-child(3n) { transition-delay: 0.16s; }
+
+      .wa-proof-tile img,
+      .wa-proof-tile video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+      }
+
+      .wa-proof-tile:hover img,
+      .wa-proof-tile:hover video {
+        transform: scale(1.025);
+        filter: brightness(1.04);
+      }
+
+      .wa-proof-tile.wa-shot {
+        background: #f4f1eb;
+      }
+
+      .wa-proof-tile.wa-shot img {
+        object-fit: contain;
+      }
+
+      .wa-proof-tile.wa-shot:hover img {
+        transform: none;
+      }
+
+      .wa-span-2,
+      .wa-span-3,
+      .wa-span-4,
+      .wa-span-6 {
+        scroll-snap-align: none;
+      }
+
+      .wa-span-2 { grid-column: span 2; }
+      .wa-span-3 { grid-column: span 3; }
+      .wa-span-4 { grid-column: span 4; }
+      .wa-span-6 { grid-column: span 6; }
+
+      .wa-video-mark {
+        position: absolute;
+        right: 0.7em;
+        bottom: 0.7em;
+        display: grid;
+        place-items: center;
+        width: 2.5em;
+        height: 2.5em;
+        padding-left: 0.1em;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 50%;
+        color: #171717;
+        background: var(--yellow);
+        box-shadow: 0 0.8em 2em rgba(0, 0, 0, 0.28);
+        font-size: 0.8em;
+        pointer-events: none;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+      }
+
+      .wa-video-tile.is-playing .wa-video-mark {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      @media (max-width: 991px) {
+        .wa-proof { padding: 5em 1.5em 4em; }
+        .wa-proof-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          grid-template-rows: repeat(3, 10em);
+          overflow: hidden;
+        }
+        .wa-proof-grid .wa-span-2,
+        .wa-proof-grid .wa-span-3,
+        .wa-proof-grid .wa-span-4,
+        .wa-proof-grid .wa-span-6 {
+          grid-column: auto;
+        }
+      }
+
+      @media (max-width: 479px) {
+        .wa-proof { padding: 4em 1em 3.5em; }
+        .wa-proof-head { width: 100%; margin-bottom: 2em; }
+        .wa-proof-title { font-size: 2.8em; }
+        .wa-proof-subtitle { max-width: 24em; font-size: 1em; }
+        .wa-proof-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-rows: none;
+          grid-auto-rows: 10em;
+          gap: 0.55em;
+          width: 100%;
+          overflow: visible;
+        }
+        .wa-proof-tile {
+          width: 100%;
+          height: auto;
+          border-radius: 0.6em;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .wa-proof-tile,
+        .wa-proof-tile img,
+        .wa-proof-tile video {
+          transition: none;
+        }
       }
