@@ -114,9 +114,12 @@
       if (!window.crypto || !window.crypto.randomUUID) {
         if (!window.crypto) window.crypto = {};
         window.crypto.randomUUID = function () {
-          return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, function (c) {
-            return (c ^ (Math.random() * 16 >> c / 4)).toString(16);
-          });
+          return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(
+            /[018]/g,
+            function (c) {
+              return (c ^ ((Math.random() * 16) >> (c / 4))).toString(16);
+            },
+          );
         };
       }
     </script>
@@ -183,7 +186,12 @@
         </div>
       </div> -->
       <header class="header">
-        <a href="https://forms.gle/5EQCy2Nz7QX2zJ9FA" target="_blank" data-lenis-toggle="" class="btn-burger">
+        <a
+          href="https://forms.gle/5EQCy2Nz7QX2zJ9FA"
+          target="_blank"
+          data-lenis-toggle=""
+          class="btn-burger"
+        >
           <div class="menu-icon-wrap">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -385,13 +393,18 @@
         <div class="padding-hero">
           <div class="container">
             <div class="hero-heading-wrap">
-              <h1 fetchpriority="high" class="heading" style="margin-bottom: 0.3em;">
+              <h1
+                fetchpriority="high"
+                class="heading"
+                style="margin-bottom: 0.3em"
+              >
                 <span class="thin">From Just another<br /></span>account to
                 “Ohhh, <br />‍<span class="shadows">I follow them</span>
               </h1>
               <div class="hero-subheading-wrap">
-                <p class="txt-32" style="font-size: 1.5rem;">
-                  We engineer end-to-end media systems that can make Founders, Coaches, and VCs go viral.
+                <p class="txt-32" style="font-size: 1.5rem">
+                  We build end-to-end content strategies that turn Founders,
+                  Coaches, and VCs into industry leaders.
                 </p>
               </div>
               <p style="display: none" fetchpriority="high" class="txt-24">
@@ -409,7 +422,9 @@
                 <div class="hor-wrap align-center">
                   <h2 class="txt-56">
                     <span class="thin"
-                      ><strong>THE MINDS WE POWER <br /></strong
+                      ><strong
+                        >THE <span class="shadows yellow">Minds</span> WE POWER
+                        <br /></strong
                     ></span>
                   </h2>
                 </div>
@@ -432,10 +447,14 @@
                     />
                   </div>
                   <div class="case-slide-txt">
-                    <div class="txt-40"><strong>YOU SEE THEM. WE SCALE THEM</strong></div>
+                    <div class="txt-40">
+                      <strong style="text-transform: capitalize"
+                        >You see them, we scale them</strong
+                      >
+                    </div>
                     <div class="txt-20">
-                      <strong>Authority Brands Powered by Monk</strong
-                      ><br />
+                      Authority Brands Powered by Monk
+                      <br />
                     </div>
                   </div>
                 </a>
@@ -457,17 +476,15 @@
                   </div>
                   <div class="case-slide-txt">
                     <div class="txt-40">
-                      <strong>WHERE CONTENT MEETS AI</strong>
-                    </div>
-                    <div class="txt-20">
                       <strong>AI Content Systems in Action</strong>
+                    </div>
+                    <div class="txt-20" style="text-transform: capitalize">
+                      Where content meet aI
                     </div>
                   </div>
                 </a>
-
-             
               </div>
-              <a href="/Projects/" class="all-projects-btn w-inline-block">
+              <a href="#lets-talk" class="all-projects-btn w-inline-block">
                 <div class="all-projects-wrap">
                   <div class="folder-back">
                     <img
@@ -482,7 +499,12 @@
                         >Get the Monk Playbook</span
                       >
                     </div>
-                    <img loading="lazy" src="./images/symbol.svg" class="logoOnFile" alt="" />
+                    <img
+                      loading="lazy"
+                      src="./images/symbol.svg"
+                      class="logoOnFile"
+                      alt=""
+                    />
                   </div>
                   <div class="img-stack">
                     <img
@@ -493,7 +515,6 @@
                       folder="case-3"
                       sizes="(max-width: 479px) 100vw, 467px"
                       loading="lazy"
-                  
                     /><img
                       class="folder-case-preview"
                       src="./images/volt2.jpeg"
@@ -502,7 +523,6 @@
                       folder="case-2"
                       sizes="(max-width: 479px) 100vw, 467px"
                       loading="lazy"
-                      
                     />
                     <img
                       class="folder-case-preview"
@@ -512,7 +532,6 @@
                       folder="case-1"
                       sizes="(max-width: 479px) 100vw, 467px"
                       loading="lazy"
-                      
                     />
                   </div>
                 </div>
@@ -526,8 +545,13 @@
         <!-- Header -->
         <div class="container big">
           <div class="heading-wrap _w-60 align-center">
-            <h2 anim="heading" style="width: 60rem;" class="heading white">
-              Meet the <span class="shadows yellow">faces</span> who are all over your feed
+            <h2
+              anim="heading"
+              style="width: min(60rem, 100%); font-size: 4em"
+              class="heading white"
+            >
+              Meet the <span class="shadows yellow">faces</span> who are all
+              over your feed
             </h2>
             <div class="hero-subheading-wrap"></div>
           </div>
@@ -538,9 +562,10 @@
           <!-- Row 1 — scrolls left -->
           <div class="marquee-row">
             <div class="marquee-inner">
-              <div class="marquee-track"  id="track1a">
+              <div class="marquee-track" id="track1a">
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/abhay.jpeg"
                     alt="Abhay Mitra"
@@ -548,7 +573,8 @@
                   <div class="gallery-card__name">Abhay Mitra</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/Acharya Pankit Goyal.jpeg"
                     alt="Acharya Pankit Goyal"
@@ -556,7 +582,8 @@
                   <div class="gallery-card__name">Acharya Pankit Goyal</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Akshay Paliwal  (Custom).webp"
                     alt="Akshay Paliwal"
@@ -564,7 +591,8 @@
                   <div class="gallery-card__name">Akshay Paliwal</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Anish Palesha (Custom).webp"
                     alt="Anish Palesha"
@@ -572,7 +600,8 @@
                   <div class="gallery-card__name">Anish Palesha</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Aryan Tripathi (Custom).webp"
                     alt="Aryan Tripathi"
@@ -580,7 +609,8 @@
                   <div class="gallery-card__name">Aryan Tripathi</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Dr. Ishita Kaul  (Custom).webp"
                     alt="Dr. Ishita Kaul"
@@ -588,7 +618,8 @@
                   <div class="gallery-card__name">Dr. Ishita Kaul</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Himanshu Agrawal (Custom).webp"
                     alt="Himanshu Agrawal"
@@ -596,7 +627,8 @@
                   <div class="gallery-card__name">Himanshu Agrawal</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Ishmat Khoja  (Custom).webp"
                     alt="Ishmat Khoja"
@@ -604,7 +636,8 @@
                   <div class="gallery-card__name">Ishmat Khoja</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/JITU IG COACH (Custom).webp"
                     alt="Jitu IG Coach"
@@ -612,7 +645,8 @@
                   <div class="gallery-card__name">Jitu IG Coach</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/jas.jpeg"
                     alt="Jas Karan"
@@ -620,7 +654,8 @@
                   <div class="gallery-card__name">Jas Karan</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Jeet shah (Custom).webp"
                     alt="Jeet Shah"
@@ -628,7 +663,8 @@
                   <div class="gallery-card__name">Jeet Shah</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Karthik naidu  (Custom).webp"
                     alt="Karthik Naidu"
@@ -636,7 +672,8 @@
                   <div class="gallery-card__name">Karthik Naidu</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Navin Parmar (Custom).webp"
                     alt="Navin Parmar"
@@ -644,7 +681,8 @@
                   <div class="gallery-card__name">Navin Parmar</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Pragya Dubey  (Custom).webp"
                     alt="Pragya Dubey"
@@ -652,7 +690,8 @@
                   <div class="gallery-card__name">Pragya Dubey</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Ram Verma  (Custom).webp"
                     alt="Ram Verma"
@@ -660,16 +699,18 @@
                   <div class="gallery-card__name">Ram Verma</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Sharan Hegde  (Custom).webp"
                     alt="Sharan Hegde"
                   />
                   <div class="gallery-card__name">Sharan Hegde</div>
                 </div>
-            
+
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Shripal Gandhi (Custom).webp"
                     alt="Shripal Gandhi"
@@ -677,7 +718,8 @@
                   <div class="gallery-card__name">Shripal Gandhi</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Shubh jain.webp"
                     alt="Shubh jain"
@@ -685,7 +727,8 @@
                   <div class="gallery-card__name">Shubh jain</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Vijay prince  (Custom).webp"
                     alt="Vijay prince"
@@ -693,7 +736,8 @@
                   <div class="gallery-card__name">Vijay prince</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Vishal Saini (Custom).webp"
                     alt="Vishal Saini"
@@ -701,7 +745,8 @@
                   <div class="gallery-card__name">Vishal Saini</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Yash Vardhan Swami.webp"
                     alt="Yash Vardhan Swami"
@@ -712,7 +757,8 @@
               <!-- Duplicate for seamless loop -->
               <div class="marquee-track" id="track1b">
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Abhay Mitra  (Custom).webp"
                     alt="Abhay Mitra"
@@ -720,7 +766,8 @@
                   <div class="gallery-card__name">Abhay Mitra</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Acharya Pankit Goyal (Custom).webp"
                     alt="Acharya Pankit Goyal"
@@ -728,7 +775,8 @@
                   <div class="gallery-card__name">Acharya Pankit Goyal</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Akshay Paliwal  (Custom).webp"
                     alt="Akshay Paliwal"
@@ -736,7 +784,8 @@
                   <div class="gallery-card__name">Akshay Paliwal</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Anish Palesha (Custom).webp"
                     alt="Anish Palesha"
@@ -744,7 +793,8 @@
                   <div class="gallery-card__name">Anish Palesha</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Aryan Tripathi (Custom).webp"
                     alt="Aryan Tripathi"
@@ -752,7 +802,8 @@
                   <div class="gallery-card__name">Aryan Tripathi</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Dr. Ishita Kaul  (Custom).webp"
                     alt="Dr. Ishita Kaul"
@@ -760,7 +811,8 @@
                   <div class="gallery-card__name">Dr. Ishita Kaul</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Himanshu Agrawal (Custom).webp"
                     alt="Himanshu Agrawal"
@@ -768,7 +820,8 @@
                   <div class="gallery-card__name">Himanshu Agrawal</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Ishmat Khoja  (Custom).webp"
                     alt="Ishmat Khoja"
@@ -776,7 +829,8 @@
                   <div class="gallery-card__name">Ishmat Khoja</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/JITU IG COACH (Custom).webp"
                     alt="Jitu IG Coach"
@@ -784,7 +838,8 @@
                   <div class="gallery-card__name">Jitu IG Coach</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Jas Karan (Custom).webp"
                     alt="Jas Karan"
@@ -792,7 +847,8 @@
                   <div class="gallery-card__name">Jas Karan</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Jeet shah (Custom).webp"
                     alt="Jeet Shah"
@@ -800,7 +856,8 @@
                   <div class="gallery-card__name">Jeet Shah</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Karthik naidu  (Custom).webp"
                     alt="Karthik Naidu"
@@ -808,7 +865,8 @@
                   <div class="gallery-card__name">Karthik Naidu</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Navin Parmar (Custom).webp"
                     alt="Navin Parmar"
@@ -816,7 +874,8 @@
                   <div class="gallery-card__name">Navin Parmar</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Pragya Dubey  (Custom).webp"
                     alt="Pragya Dubey"
@@ -824,7 +883,8 @@
                   <div class="gallery-card__name">Pragya Dubey</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Ram Verma  (Custom).webp"
                     alt="Ram Verma"
@@ -832,16 +892,18 @@
                   <div class="gallery-card__name">Ram Verma</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Sharan Hegde  (Custom).webp"
                     alt="Sharan Hegde"
                   />
                   <div class="gallery-card__name">Sharan Hegde</div>
                 </div>
-             
+
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/hypno.jpeg"
                     alt="Hypno Guru India"
@@ -849,7 +911,8 @@
                   <div class="gallery-card__name">Hypno Guru India</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Shripal Gandhi (Custom).webp"
                     alt="Shripal Gandhi"
@@ -857,7 +920,8 @@
                   <div class="gallery-card__name">Shripal Gandhi</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Shubh jain.webp"
                     alt="Shubh jain"
@@ -865,7 +929,8 @@
                   <div class="gallery-card__name">Shubh jain</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Vijay prince  (Custom).webp"
                     alt="Vijay prince"
@@ -873,7 +938,8 @@
                   <div class="gallery-card__name">Vijay prince</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Vishal Saini (Custom).webp"
                     alt="Vishal Saini"
@@ -881,7 +947,8 @@
                   <div class="gallery-card__name">Vishal Saini</div>
                 </div>
                 <div class="gallery-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     class="gallery-img"
                     src="./clients/compressed/Yash Vardhan Swami.webp"
                     alt="Yash Vardhan Swami"
@@ -899,42 +966,50 @@
           <!-- Row 1 — scrolls left -->
           <div class="marquee-row">
             <div class="marquee-track" id="track1a">
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=420&h=440&fit=crop"
                 alt="Fashion"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=360&h=440&fit=crop"
                 alt="Food"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=440&fit=crop"
                 alt="Interior"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=390&h=440&fit=crop"
                 alt="Fashion"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://i.pinimg.com/736x/74/4e/0e/744e0e42f14e34c56f6c3680a84a8ecc.jpg"
                 alt="Flowers"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=380&h=440&fit=crop"
                 alt="Travel"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=460&h=440&fit=crop"
                 alt="Food"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=410&h=440&fit=crop"
                 alt="Interior"
@@ -942,42 +1017,50 @@
             </div>
             <!-- Duplicate for seamless loop -->
             <div class="marquee-track" id="track1b" aria-hidden="true">
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=420&h=440&fit=crop"
                 alt="Fashion"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=360&h=440&fit=crop"
                 alt="Food"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=440&fit=crop"
                 alt="Interior"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=390&h=440&fit=crop"
                 alt="Fashion"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1490750967868-88df5691cc6c?w=450&h=440&fit=crop"
                 alt="Flowers"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=380&h=440&fit=crop"
                 alt="Travel"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=460&h=440&fit=crop"
                 alt="Food"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=410&h=440&fit=crop"
                 alt="Interior"
@@ -988,42 +1071,50 @@
           <!-- Row 2 — scrolls right -->
           <div class="marquee-row reverse">
             <div class="marquee-track" id="track2a">
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=430&h=440&fit=crop"
                 alt="Nails"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500&h=440&fit=crop"
                 alt="Travel"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=370&h=440&fit=crop"
                 alt="Skincare"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=460&h=440&fit=crop"
                 alt="Food"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=420&h=440&fit=crop"
                 alt="Interior"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=390&h=440&fit=crop"
                 alt="Fashion"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=480&h=440&fit=crop"
                 alt="Food"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&h=440&fit=crop"
                 alt="Photography"
@@ -1031,42 +1122,50 @@
             </div>
             <!-- Duplicate for seamless loop -->
             <div class="marquee-track" id="track2b" aria-hidden="true">
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=430&h=440&fit=crop"
                 alt="Nails"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500&h=440&fit=crop"
                 alt="Travel"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=370&h=440&fit=crop"
                 alt="Skincare"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=460&h=440&fit=crop"
                 alt="Food"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=420&h=440&fit=crop"
                 alt="Interior"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=390&h=440&fit=crop"
                 alt="Fashion"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=480&h=440&fit=crop"
                 alt="Food"
               />
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 class="gallery-img"
                 src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&h=440&fit=crop"
                 alt="Photography"
@@ -1113,7 +1212,9 @@
                   <div class="ver-wrap gap-3 founder-card-left">
                     <p class="quote-icon">″</p>
                     <p class="txt-32 quote">
-                     People don't share content because it's informative. They <br> share it because it says something about them. And at Monk, we create that story
+                      People don't share content because it's informative. They
+                      share it because it says something about them. And at
+                      Monk, we create that story.
                     </p>
                     <div class="ver-wrap gap-025">
                       <div class="txt-32">
@@ -1139,23 +1240,28 @@
                   class="heading white"
                 >
                   Our <span class="shadows yellow">Reels</span>
-                  <span class="thin"> that hit</span>
+                  that hit
                 </h2>
-                <div
+                <!-- <div
                   class="hero-subheading-wrap"
                   style="justify-content: center"
                 >
                   <p class="txt-32 text-center white">
                     Short-form content that actually converts
                   </p>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
           <div class="reels-track-outer">
             <div class="reels-track" id="reels-track">
               <!-- Reel 1 -->
-              <a href="https://vimeo.com/1197646777" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197646777"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164040663-a17f28e4683cb47df10a4045827420d81a4a9d9511fa0ad3d97fdc4e2efebed6-d_960?region=us"
@@ -1173,7 +1279,12 @@
               </a>
 
               <!-- Reel 2 -->
-              <a href="https://vimeo.com/1197646205" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197646205"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164039534-fae347f800916bf333c363e9cb7fe69371da595504ad68ea0148b57a107f753c-d_960?region=us"
@@ -1191,7 +1302,12 @@
               </a>
 
               <!-- Reel 3 -->
-              <a href="https://vimeo.com/1197645574" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197645574"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164037462-96482cb320b268915ea65ccc5441c345620717a7f0f44200bed641562e7688cf-d_960?region=us"
@@ -1209,7 +1325,12 @@
               </a>
 
               <!-- Reel 4 -->
-              <a href="https://vimeo.com/1197656662" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197656662"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164036725-3e34f82857470e38d98b859a5d3ce26ede02d0263bb596f0e88fe9dcd26d8392-d_960?region=us"
@@ -1227,7 +1348,12 @@
               </a>
 
               <!-- Reel 5 -->
-              <a href="https://vimeo.com/1197646578" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197646578"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164035813-ecd353c611ebb28f10c26d59243d2859fcfcae142c28c7fc40be0cb6e7a12b8e-d_960?region=us"
@@ -1245,7 +1371,12 @@
               </a>
 
               <!-- Reel 6 -->
-              <a href="https://vimeo.com/1197646508" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197646508"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023888-937392c8d0fda511f821689e333630537db77536e42636717e6ffec4fe7ec8e9-d_960?region=us"
@@ -1263,7 +1394,12 @@
               </a>
 
               <!-- Reel 7 -->
-              <a href="https://vimeo.com/1197646294" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197646294"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023593-ce6f15920bc14f68a3712dd1ad834000f0a105847981a4805cfecfd02758d0e8-d_960?region=us"
@@ -1281,7 +1417,12 @@
               </a>
 
               <!-- Reel 8 -->
-              <a href="https://vimeo.com/1197646282" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197646282"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023474-eb0b254bd61869c94f87258db646d572d7f0021321ad9dddb2af911af934f7b1-d_960?region=us"
@@ -1299,7 +1440,12 @@
               </a>
 
               <!-- Reel 9 -->
-              <a href="https://vimeo.com/1197646203" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197646203"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023250-67f9c1eb30c82028b40be26defacce2d401d04942a0317d32b90ab402b6dffd0-d_960?region=us"
@@ -1317,7 +1463,12 @@
               </a>
 
               <!-- Reel 10 -->
-              <a href="https://vimeo.com/1197645830" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197645830"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023239-ce6ed2d567a4a158e77ed2066beada36107f19f36764c27014d18806d142b1c4-d_960?region=us"
@@ -1335,7 +1486,12 @@
               </a>
 
               <!-- Reel 11 -->
-              <a href="https://vimeo.com/1197645918" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197645918"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023108-d734dbb161428b15a623ac95ddd781e22707aebce30aac0086521671564180c2-d_960?region=us"
@@ -1353,7 +1509,12 @@
               </a>
 
               <!-- Reel 12 -->
-              <a href="https://vimeo.com/1197645987" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197645987"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023107-b225c2df988bd9ecb3930730a013060fa3ab4a0f3b0b5d1f2db5f95f660e2674-d_960?region=us"
@@ -1371,7 +1532,12 @@
               </a>
 
               <!-- Reel 13 -->
-              <a href="https://vimeo.com/1197645784" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197645784"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164022830-e8a96687eda3924bb85aeb8e69c1e23f0ad2d1e2b5c39148cae41ca5f304d164-d_960?region=us"
@@ -1389,7 +1555,12 @@
               </a>
 
               <!-- Reel 14 -->
-              <a href="https://vimeo.com/1197645521" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197645521"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164022772-a351f17c63b13587207af075f09f8e3a98307059cdcd1e112595ad5eb5ede23f-d_960?region=us"
@@ -1407,7 +1578,12 @@
               </a>
 
               <!-- Reel 15 -->
-              <a href="https://vimeo.com/1197645651" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197645651"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164022595-468b5d6592c6dd01a8362f07822475c27cb5acfe66b1c64a84e5219a3a82ea1f-d_960?region=us"
@@ -1425,7 +1601,12 @@
               </a>
 
               <!-- Reel 16 -->
-              <a href="https://vimeo.com/1197645308" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197645308"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164022457-52964f81e7b540e874b21c2ff12d66ad60be1f1a31b9d0fd3d8a9c5e82195722-d_960?region=us"
@@ -1443,7 +1624,12 @@
               </a>
 
               <!-- Reel 17 -->
-              <a href="https://vimeo.com/1197645312" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197645312"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164022360-543a0630a2191b5e5c06db769bb51123122d15eaf3dda4c38a4a43fd12b0e661-d_960?region=us"
@@ -1461,7 +1647,12 @@
               </a>
 
               <!-- Reel 18 -->
-              <a href="https://vimeo.com/1197645307" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197645307"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164022290-5b9347330c633cfeadca706f9ede75c3fed46c5d694467862434ee10dc0e454f-d_960?region=us"
@@ -1479,7 +1670,12 @@
               </a>
 
               <!-- Reel 19 -->
-              <a href="https://vimeo.com/1197642829" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197642829"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164019160-3744a16fa2067edc7e77d745b8532946260fffa207a12f5fb1b8f777d0eda411-d_960?region=us"
@@ -1497,7 +1693,12 @@
               </a>
 
               <!-- Reel 20 -->
-              <a href="https://vimeo.com/1197642828" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197642828"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164019110-52b1eccf8745ba3f06615f29c13360d8fd73c07ba4b9d8e242aa6a8b18cdb837-d_960?region=us"
@@ -1515,7 +1716,12 @@
               </a>
 
               <!-- Reel 21 -->
-              <a href="https://vimeo.com/1197642698" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197642698"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164018982-69ad8e0e942d776a3a341e7cf112d7588a27c181ae4acccb03f9b08930681b98-d_960?region=us"
@@ -1533,7 +1739,12 @@
               </a>
 
               <!-- Reel 22 -->
-              <a href="https://vimeo.com/1197642317" target="_blank" rel="noopener noreferrer" class="reel-card">
+              <a
+                href="https://vimeo.com/1197642317"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164018660-7ee9f738e86b182fe43b84774a68dddbc14a467afef3f7d1aa0432a80fcf73cd-d_960?region=us"
@@ -1550,7 +1761,14 @@
                 </div>
               </a>
               <!-- Duplicate set for seamless loop -->
-              <a href="https://vimeo.com/1197646777" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197646777"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164040663-a17f28e4683cb47df10a4045827420d81a4a9d9511fa0ad3d97fdc4e2efebed6-d_960?region=us"
@@ -1567,7 +1785,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197646205" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197646205"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164039534-fae347f800916bf333c363e9cb7fe69371da595504ad68ea0148b57a107f753c-d_960?region=us"
@@ -1584,7 +1809,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197645574" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197645574"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164037462-96482cb320b268915ea65ccc5441c345620717a7f0f44200bed641562e7688cf-d_960?region=us"
@@ -1601,7 +1833,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197656662" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197656662"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164036725-3e34f82857470e38d98b859a5d3ce26ede02d0263bb596f0e88fe9dcd26d8392-d_960?region=us"
@@ -1618,7 +1857,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197646578" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197646578"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164035813-ecd353c611ebb28f10c26d59243d2859fcfcae142c28c7fc40be0cb6e7a12b8e-d_960?region=us"
@@ -1635,7 +1881,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197646508" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197646508"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023888-937392c8d0fda511f821689e333630537db77536e42636717e6ffec4fe7ec8e9-d_960?region=us"
@@ -1652,7 +1905,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197646294" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197646294"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023593-ce6f15920bc14f68a3712dd1ad834000f0a105847981a4805cfecfd02758d0e8-d_960?region=us"
@@ -1669,7 +1929,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197646282" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197646282"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023474-eb0b254bd61869c94f87258db646d572d7f0021321ad9dddb2af911af934f7b1-d_960?region=us"
@@ -1686,7 +1953,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197646203" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197646203"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023250-67f9c1eb30c82028b40be26defacce2d401d04942a0317d32b90ab402b6dffd0-d_960?region=us"
@@ -1703,7 +1977,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197645830" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197645830"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023239-ce6ed2d567a4a158e77ed2066beada36107f19f36764c27014d18806d142b1c4-d_960?region=us"
@@ -1720,7 +2001,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197645918" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197645918"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023108-d734dbb161428b15a623ac95ddd781e22707aebce30aac0086521671564180c2-d_960?region=us"
@@ -1737,7 +2025,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197645987" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197645987"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164023107-b225c2df988bd9ecb3930730a013060fa3ab4a0f3b0b5d1f2db5f95f660e2674-d_960?region=us"
@@ -1754,7 +2049,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197645784" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197645784"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164022830-e8a96687eda3924bb85aeb8e69c1e23f0ad2d1e2b5c39148cae41ca5f304d164-d_960?region=us"
@@ -1771,7 +2073,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197645521" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197645521"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164022772-a351f17c63b13587207af075f09f8e3a98307059cdcd1e112595ad5eb5ede23f-d_960?region=us"
@@ -1788,7 +2097,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197645651" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197645651"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164022595-468b5d6592c6dd01a8362f07822475c27cb5acfe66b1c64a84e5219a3a82ea1f-d_960?region=us"
@@ -1805,7 +2121,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197645308" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197645308"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164022457-52964f81e7b540e874b21c2ff12d66ad60be1f1a31b9d0fd3d8a9c5e82195722-d_960?region=us"
@@ -1822,7 +2145,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197645312" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197645312"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164022360-543a0630a2191b5e5c06db769bb51123122d15eaf3dda4c38a4a43fd12b0e661-d_960?region=us"
@@ -1839,7 +2169,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197645307" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197645307"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164022290-5b9347330c633cfeadca706f9ede75c3fed46c5d694467862434ee10dc0e454f-d_960?region=us"
@@ -1856,7 +2193,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197642829" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197642829"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164019160-3744a16fa2067edc7e77d745b8532946260fffa207a12f5fb1b8f777d0eda411-d_960?region=us"
@@ -1873,7 +2217,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197642828" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197642828"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164019110-52b1eccf8745ba3f06615f29c13360d8fd73c07ba4b9d8e242aa6a8b18cdb837-d_960?region=us"
@@ -1890,7 +2241,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197642698" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197642698"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164018982-69ad8e0e942d776a3a341e7cf112d7588a27c181ae4acccb03f9b08930681b98-d_960?region=us"
@@ -1907,7 +2265,14 @@
                 </div>
               </a>
 
-              <a href="https://vimeo.com/1197642317" target="_blank" rel="noopener noreferrer" class="reel-card" aria-hidden="true" tabindex="-1">
+              <a
+                href="https://vimeo.com/1197642317"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="reel-card"
+                aria-hidden="true"
+                tabindex="-1"
+              >
                 <div class="reel-video-wrap">
                   <img
                     src="https://i.vimeocdn.com/video/2164018660-7ee9f738e86b182fe43b84774a68dddbc14a467afef3f7d1aa0432a80fcf73cd-d_960?region=us"
@@ -1923,7 +2288,6 @@
                   </div>
                 </div>
               </a>
-
             </div>
             <!-- Edge fades -->
             <div class="reels-fade-left"></div>
@@ -1942,8 +2306,8 @@
                 </h2>
                 <div class="hero-subheading-wrap">
                   <p class="txt-32">
-                   Our goal is never followers,
-The goal was becoming the obvious choice.
+                    Our goal is never followers, The goal was becoming the
+                    obvious choice.
                   </p>
                 </div>
               </div>
@@ -2116,7 +2480,10 @@ The goal was becoming the obvious choice.
                     </div>
                     <div class="txt-icon-wrap">
                       <div class="txt-24">
-                        <strong>Niches Tapped <br> For Content</strong>
+                        <strong
+                          >Niches Tapped <br />
+                          For Content</strong
+                        >
                       </div>
                     </div>
                   </div>
@@ -2147,11 +2514,15 @@ The goal was becoming the obvious choice.
                   style="margin-bottom: 5px"
                   class="txt-80 white"
                 >
-                  But, <span class="shadows yellow">how</span> do we do it? <span class="thin"></span>
+                  But, <span class="shadows yellow">how</span> do we do it?
+                  <span class="thin"></span>
                 </h2>
               </div>
-              <div class="hero-subheading-wrap" style="width: 51em;">
-                <p class="txt-32 text-center white" style="width: 100%; font-size: 1.7em;">
+              <div class="hero-subheading-wrap" style="width: 51em">
+                <p
+                  class="txt-32 text-center white"
+                  style="width: 100%; font-size: 1.7em"
+                >
                   No, we do not really have an in-house Harry Potter for this
                 </p>
               </div>
@@ -2268,12 +2639,16 @@ The goal was becoming the obvious choice.
         <div class="padding-global" style="padding-bottom: 0">
           <div class="container big center">
             <div class="heading-wrap align-center" style="margin-bottom: 1.5em">
-              <h2 style="margin-bottom: 0.2em;" anim="heading" class="heading white">
+              <h2
+                style="margin-bottom: 0.2em"
+                anim="heading"
+                class="heading white"
+              >
                 What are our <span class="shadows yellow"> stars</span> saying?
               </h2>
               <div class="hero-subheading-wrap" style="justify-content: center">
                 <p class="txt-32 text-center white" style="opacity: 0.6">
-                  We did not bribe them though. 
+                  We did not bribe them though.
                 </p>
               </div>
             </div>
@@ -2289,32 +2664,69 @@ The goal was becoming the obvious choice.
             <!-- Hosted video testimonials -->
             <div class="cj-card">
               <div class="cj-thumb-wrap">
-                <video controls playsinline preload="metadata" src="https://pub-5f0b553843e14756926c6fd5953fbd82.r2.dev/001.mp4" aria-label="Monk Media client testimonial 001"></video>
+                <video
+                  controls
+                  playsinline
+                  preload="metadata"
+                  src="https://pub-5f0b553843e14756926c6fd5953fbd82.r2.dev/001.mp4"
+                  aria-label="Monk Media client testimonial 001"
+                ></video>
               </div>
             </div>
             <div class="cj-card">
               <div class="cj-thumb-wrap">
-                <video controls playsinline preload="metadata" src="https://pub-5f0b553843e14756926c6fd5953fbd82.r2.dev/003.mp4" aria-label="Monk Media client testimonial 003"></video>
+                <video
+                  controls
+                  playsinline
+                  preload="metadata"
+                  src="https://pub-5f0b553843e14756926c6fd5953fbd82.r2.dev/003.mp4"
+                  aria-label="Monk Media client testimonial 003"
+                ></video>
               </div>
             </div>
             <div class="cj-card">
               <div class="cj-thumb-wrap">
-                <video controls playsinline preload="metadata" src="https://pub-5f0b553843e14756926c6fd5953fbd82.r2.dev/004.mp4" aria-label="Monk Media client testimonial 004"></video>
+                <video
+                  controls
+                  playsinline
+                  preload="metadata"
+                  src="https://pub-5f0b553843e14756926c6fd5953fbd82.r2.dev/004.mp4"
+                  aria-label="Monk Media client testimonial 004"
+                ></video>
               </div>
             </div>
             <div class="cj-card">
               <div class="cj-thumb-wrap">
-                <video controls playsinline preload="metadata" src="https://pub-5f0b553843e14756926c6fd5953fbd82.r2.dev/005.mp4" aria-label="Monk Media client testimonial 005"></video>
+                <video
+                  controls
+                  playsinline
+                  preload="metadata"
+                  src="https://pub-5f0b553843e14756926c6fd5953fbd82.r2.dev/005.mp4"
+                  aria-label="Monk Media client testimonial 005"
+                ></video>
               </div>
             </div>
             <div class="cj-card">
               <div class="cj-thumb-wrap">
-                <video controls playsinline preload="metadata" src="https://pub-5f0b553843e14756926c6fd5953fbd82.r2.dev/006.mp4" aria-label="Monk Media client testimonial 006"></video>
+                <video
+                  controls
+                  playsinline
+                  preload="metadata"
+                  src="https://pub-5f0b553843e14756926c6fd5953fbd82.r2.dev/006.mp4"
+                  aria-label="Monk Media client testimonial 006"
+                ></video>
               </div>
             </div>
             <div class="cj-card">
               <div class="cj-thumb-wrap">
-                <video controls playsinline preload="metadata" style="object-fit: contain; background: #1f1f1f;" src="https://pub-5f0b553843e14756926c6fd5953fbd82.r2.dev/008.mp4" aria-label="Monk Media client testimonial 008"></video>
+                <video
+                  controls
+                  playsinline
+                  preload="metadata"
+                  style="object-fit: contain; background: #1f1f1f"
+                  src="https://pub-5f0b553843e14756926c6fd5953fbd82.r2.dev/008.mp4"
+                  aria-label="Monk Media client testimonial 008"
+                ></video>
               </div>
             </div>
           </div>
@@ -2357,52 +2769,148 @@ The goal was becoming the obvious choice.
       <!-- ── WhatsApp testimony mosaic ── -->
       <section class="wa-proof" id="client-proof">
         <div class="wa-proof-head">
-          <p class="wa-proof-kicker">Receipts, not promises</p>
-          <h2 class="wa-proof-title">
-            The work speaks. Their <span>messages</span> say it louder.
+          <!-- <p class="wa-proof-kicker">Receipts, not promises</p> -->
+          <h2 class="wa-proof-title" style="text-transform: uppercase">
+            From Strategy to
+            <span class="yellow" style="text-transform: lowercase"
+              >Appreciation.</span
+            >
           </h2>
-          <p class="wa-proof-subtitle">
+          <!-- <p class="wa-proof-subtitle">
             Real wins, unfiltered feedback, and the people behind the results.
-          </p>
+          </p> -->
         </div>
 
         <div class="wa-proof-grid">
           <!-- Row 1: image-led proof wall -->
-          <figure class="wa-proof-tile wa-shot wa-span-2"><img src="./whatsapp-testimony/1.jpg" loading="lazy" alt="Client feedback celebrating high-performing video views" /></figure>
-          <figure class="wa-proof-tile wa-shot wa-span-2"><img src="./whatsapp-testimony/2.jpg" loading="lazy" alt="Client praising a creative coaching advertisement" /></figure>
-          <figure class="wa-proof-tile wa-span-2"><img src="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow (1).jpg" loading="lazy" alt="Monk Media team meeting a client" /></figure>
-          <figure class="wa-proof-tile wa-span-2"><img src="./whatsapp-testimony/4.jpg" loading="lazy" alt="Monk Media team with collaborators" /></figure>
-          <figure class="wa-proof-tile wa-shot wa-span-2"><img src="./whatsapp-testimony/8.jpg" loading="lazy" alt="High-performing social content engagement results" /></figure>
-          <figure class="wa-proof-tile wa-span-2"><img src="./whatsapp-testimony/10.jpg" loading="lazy" alt="Monk Media recognition at the SaaS Millionaire Summit" /></figure>
+          <figure class="wa-proof-tile wa-shot wa-span-2">
+            <img
+              src="./whatsapp-testimony/1.jpg"
+              loading="lazy"
+              alt="Client feedback celebrating high-performing video views"
+            />
+          </figure>
+          <figure class="wa-proof-tile wa-shot wa-span-2">
+            <img
+              src="./whatsapp-testimony/2.jpg"
+              loading="lazy"
+              alt="Client praising a creative coaching advertisement"
+            />
+          </figure>
+          <figure class="wa-proof-tile wa-span-2">
+            <img
+              style="object-position: top"
+              src="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow (1).jpg"
+              loading="lazy"
+              alt="Monk Media team meeting a client"
+            />
+          </figure>
+          <figure class="wa-proof-tile wa-span-2">
+            <img
+              src="./whatsapp-testimony/4.jpg"
+              loading="lazy"
+              alt="Monk Media team with collaborators"
+            />
+          </figure>
+          <figure class="wa-proof-tile wa-shot wa-span-2">
+            <img
+              src="./whatsapp-testimony/8.jpg"
+              loading="lazy"
+              alt="High-performing social content engagement results"
+            />
+          </figure>
+          <figure class="wa-proof-tile wa-span-2">
+            <img
+              src="./whatsapp-testimony/10.jpg"
+              loading="lazy"
+              alt="Monk Media recognition at the SaaS Millionaire Summit"
+            />
+          </figure>
 
           <!-- Row 2 -->
           <figure class="wa-proof-tile wa-span-3 wa-video-tile">
-            <video muted loop playsinline preload="metadata" poster="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow.jpg">
-              <source src="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow.mp4" type="video/mp4" />
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow.jpg"
+            >
+              <source
+                src="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow.mp4"
+                type="video/mp4"
+              />
             </video>
             <span class="wa-video-mark" aria-hidden="true">▶</span>
           </figure>
-          <figure class="wa-proof-tile wa-shot wa-span-3"><img src="./whatsapp-testimony/3.jpg" loading="lazy" alt="Client appreciation message for an advertisement" /></figure>
+          <figure class="wa-proof-tile wa-shot wa-span-3">
+            <img
+              src="./whatsapp-testimony/3.jpg"
+              loading="lazy"
+              alt="Client appreciation message for an advertisement"
+            />
+          </figure>
           <figure class="wa-proof-tile wa-span-3 wa-video-tile">
-            <video muted loop playsinline preload="metadata" poster="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow (1).jpg">
-              <source src="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow (1).mp4" type="video/mp4" />
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow (1).jpg"
+            >
+              <source
+                src="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow (1).mp4"
+                type="video/mp4"
+              />
             </video>
             <span class="wa-video-mark" aria-hidden="true">▶</span>
           </figure>
-          <figure class="wa-proof-tile wa-shot wa-span-3"><img src="./whatsapp-testimony/5.jpg" loading="lazy" alt="WhatsApp messages praising Monk Media's work" /></figure>
+          <figure class="wa-proof-tile wa-shot wa-span-3">
+            <img
+              src="./whatsapp-testimony/5.jpg"
+              loading="lazy"
+              alt="WhatsApp messages praising Monk Media's work"
+            />
+          </figure>
 
           <!-- Row 3 -->
-          <figure class="wa-proof-tile wa-shot wa-span-3"><img src="./whatsapp-testimony/9.jpg" loading="lazy" alt="Audience and brand comments on client content" /></figure>
-          <figure class="wa-proof-tile wa-shot wa-span-3"><img src="./whatsapp-testimony/6.jpg" loading="lazy" alt="Audience message appreciating relevant content" /></figure>
-          <figure class="wa-proof-tile wa-shot wa-span-3"><img src="./whatsapp-testimony/7.jpg" loading="lazy" alt="Verified creators engaging with client content" /></figure>
+          <figure class="wa-proof-tile wa-shot wa-span-3">
+            <img
+              src="./whatsapp-testimony/9.jpg"
+              loading="lazy"
+              alt="Audience and brand comments on client content"
+            />
+          </figure>
+          <figure class="wa-proof-tile wa-shot wa-span-3">
+            <img
+              src="./whatsapp-testimony/6.jpg"
+              loading="lazy"
+              alt="Audience message appreciating relevant content"
+            />
+          </figure>
+          <figure class="wa-proof-tile wa-shot wa-span-3">
+            <img
+              src="./whatsapp-testimony/7.jpg"
+              loading="lazy"
+              alt="Verified creators engaging with client content"
+            />
+          </figure>
           <figure class="wa-proof-tile wa-span-3 wa-video-tile">
-            <video muted loop playsinline preload="metadata" poster="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow (2).jpg">
-              <source src="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow (2).mp4" type="video/mp4" />
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow (2).jpg"
+            >
+              <source
+                src="./whatsapp-testimony/Not networking...Just everyday collisions with people shaping tomorrow (2).mp4"
+                type="video/mp4"
+              />
             </video>
             <span class="wa-video-mark" aria-hidden="true">▶</span>
           </figure>
         </div>
-
       </section>
       <!-- ── /WhatsApp testimony mosaic ── -->
 
@@ -2496,7 +3004,7 @@ The goal was becoming the obvious choice.
                     <div class="list-wrap">
                       <div class="list-title">
                         <div class="txt-32">
-                          But We are more than the Numbers
+                          <strong> But We are more than the Numbers </strong>
                         </div>
                       </div>
                       <div class="list-item white">
@@ -2518,7 +3026,7 @@ The goal was becoming the obvious choice.
                           Done-for-you content strategy your audience wants
                         </li>
                       </div>
-                      <div class="list-item white">
+                      <div class="list-item white" style="margin-top: 1em">
                         <a
                           data-wf--btn-white--variant="yellow"
                           href="#lets-talk"
@@ -2537,22 +3045,29 @@ The goal was becoming the obvious choice.
                     <div class="crea-dir-card">
                       <img
                         src="./images/footer-profile.jpeg"
-                        style="object-fit: cover;"
+                        style="object-fit: cover"
                         loading="lazy"
                         alt="Dima Diuh | Creative Director at Fooror Design Agency for Events"
                         class="ava-cta"
                       />
                       <div class="ver-wrap _w-20 gap-2">
-                        <p class="txt-20">
-                          The best marketing doesn't interrupt people. It becomes what they're looking for.
+                        <p class="txt-20" style="font-size: 1em">
+                          The best marketing doesn't interrupt people. It
+                          becomes what they're looking for.
                         </p>
                         <div class="">
-                        <p class="txt-32" style="font-size: 1.5em;margin-bottom:5px;"><strong>Nikhil Prajapati</strong></p>
-                        <small style="font-size: 1em;">Founder Of Monk Media</small>
+                          <p
+                            class="txt-32"
+                            style="font-size: 1.5em; margin-bottom: 5px"
+                          >
+                            <strong>Nikhil Prajapati</strong>
+                          </p>
+                          <small style="font-size: 1em"
+                            >Founder Of Monk Media</small
+                          >
                         </div>
                       </div>
                     </div>
-                
                   </div>
                 </div>
               </div>
@@ -2600,8 +3115,8 @@ The goal was becoming the obvious choice.
                 class="button w-variant-6e3cfd57-0d30-8f0c-367c-d1cf1772eaae w-inline-block"
               >
                 <div class="btn-txt-mask">
-                  <div class="btn-txt">Discuss the project</div>
-                  <div class="btn-txt">Discuss the project</div>
+                  <div class="btn-txt">I want strategy Session</div>
+                  <div class="btn-txt">I want strategy Session</div>
                 </div>
               </a>
             </div>
@@ -2636,10 +3151,12 @@ The goal was becoming the obvious choice.
                     </div>
                     <p class="txt-24">
                       Before we create anything, we define your voice, audience,
-                      positioning, and goals. Clear direction. No guessing.
+                      positioning, and goals. <br />
+                      Clear direction. No guessing.
                     </p>
                     <div class="stage-img-wrap">
-                      <video loading="lazy"
+                      <video
+                        loading="lazy"
                         src="https://pub-113105a6901542578a0b589f3b0ed48a.r2.dev/steps/1.mp4"
                         class="answer-img step-video"
                         loop
@@ -2658,7 +3175,8 @@ The goal was becoming the obvious choice.
                       actually reflects your brand.
                     </p>
                     <div class="stage-img-wrap">
-                      <video loading="lazy"
+                      <video
+                        loading="lazy"
                         src="https://pub-113105a6901542578a0b589f3b0ed48a.r2.dev/steps/2.mp4"
                         class="answer-img step-video"
                         loop
@@ -2676,7 +3194,8 @@ The goal was becoming the obvious choice.
                       generate leads, and move people to take action.
                     </p>
                     <div class="stage-img-wrap">
-                      <video loading="lazy"
+                      <video
+                        loading="lazy"
                         src="https://pub-113105a6901542578a0b589f3b0ed48a.r2.dev/steps/3.mp4"
                         class="answer-img step-video"
                         loop
@@ -2695,7 +3214,8 @@ The goal was becoming the obvious choice.
                       it matters.
                     </p>
                     <div class="stage-img-wrap">
-                      <video loading="lazy"
+                      <video
+                        loading="lazy"
                         src="https://pub-113105a6901542578a0b589f3b0ed48a.r2.dev/video/Multi-Platform%20Presence.mp4"
                         class="answer-img step-video"
                         loop
@@ -2709,7 +3229,6 @@ The goal was becoming the obvious choice.
             </div>
           </div>
         </section>
-      
       </section>
 
       <section data-anim="research" class="s-global">
@@ -2727,14 +3246,14 @@ The goal was becoming the obvious choice.
                         src="./images/nikhil.jpeg"
                         loading="lazy"
                         alt=""
-                        style="object-fit: cover;"
+                        style="object-fit: cover"
                         class="ava-128"
                       />
                       <div class="ver-wrap gap-025">
                         <div class="txt-32">
                           <strong>Nikhil Prajapati</strong>
                         </div>
-                        <div class="txt-24">Founder & HEAD - Monk Media</div>
+                        <div class="txt-24" style="font-size: 1em;">Founder & HEAD - Monk Media</div>
                       </div>
                     </div>
                     <p class="txt-40">
@@ -2756,15 +3275,14 @@ The goal was becoming the obvious choice.
               </div>
               <div class="ver-wrap _w-100">
                 <h2 anim="heading" class="heading">
-                  Frequently Asked<br />‍<span class="shadows purple"
-                    >Questions</span
+                  Frequently Asked<br />‍<span class="shadows purple">Questions</span
                   >
                 </h2>
                 <div class="accordion">
                   <div data-anim="answer-bg" class="answer-bg"></div>
                   <div class="question">
                     <div class="num-question">
-                      <div class="txt-40" style="font-size: 2em;">
+                      <div class="txt-40" style="font-size: 2em">
                         <strong>Is this for beginners?</strong>
                       </div>
                     </div>
@@ -2800,7 +3318,7 @@ The goal was becoming the obvious choice.
                   <div data-anim="answer-bg" class="answer-bg"></div>
                   <div class="question">
                     <div class="num-question">
-                      <div class="txt-40" style="font-size: 2em;">
+                      <div class="txt-40" style="font-size: 2em">
                         <strong>Can you guarantee I’ll go viral?</strong>
                       </div>
                     </div>
@@ -2836,7 +3354,7 @@ The goal was becoming the obvious choice.
                   <div data-anim="answer-bg" class="answer-bg"></div>
                   <div class="question">
                     <div class="num-question">
-                      <div class="txt-40" style="font-size: 2em;">
+                      <div class="txt-40" style="font-size: 2em">
                         <strong
                           >What makes you different from other agencies?</strong
                         >
@@ -2874,7 +3392,7 @@ The goal was becoming the obvious choice.
                   <div data-anim="answer-bg" class="answer-bg"></div>
                   <div class="question">
                     <div class="num-question">
-                      <div class="txt-40" style="font-size: 2em;">
+                      <div class="txt-40" style="font-size: 2em">
                         <strong>How soon will I see results?</strong>
                       </div>
                     </div>
@@ -2911,7 +3429,7 @@ The goal was becoming the obvious choice.
                   <div data-anim="answer-bg" class="answer-bg"></div>
                   <div class="question">
                     <div class="num-question">
-                      <div class="txt-40" style="font-size: 2em;">
+                      <div class="txt-40" style="font-size: 2em">
                         <strong>Will I have to do everything myself?</strong>
                       </div>
                     </div>
@@ -2956,12 +3474,12 @@ The goal was becoming the obvious choice.
                 We can dedicate
                 <span class="shadows purple">maximum</span> attention to your
                 project because we only take on
-                <span class="shadows purple">2 projects</span> per month
+                <span class="shadows purple">3 projects</span> per month
               </h2>
               <a href="#lets-talk" class="button big w-inline-block">
                 <div class="btn-txt-mask">
-                  <div class="btn-txt">Start a new project</div>
-                  <div class="btn-txt">Start a new project</div>
+                  <div class="btn-txt">I want strategy Session</div>
+                  <div class="btn-txt">I want strategy Session</div>
                 </div>
               </a>
             </div>
@@ -2985,10 +3503,65 @@ The goal was becoming the obvious choice.
               <p class="txt-16 op-60">
                 MonkMedia.io © 2026 All rights reserved
               </p>
-              <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem;">
-                <a href="/privacy-policy/" style="font-family:'Geist',sans-serif;font-size:0.85rem;font-weight:600;color:#fff;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);padding:0.35rem 0.9rem;border-radius:999px;text-decoration:none;letter-spacing:0.02em;transition:background 0.2s;">Privacy Policy</a>
-                <a href="/terms/" style="font-family:'Geist',sans-serif;font-size:0.85rem;font-weight:600;color:#fff;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);padding:0.35rem 0.9rem;border-radius:999px;text-decoration:none;letter-spacing:0.02em;transition:background 0.2s;">Terms &amp; Conditions</a>
-                <a href="/refund-policy/" style="font-family:'Geist',sans-serif;font-size:0.85rem;font-weight:600;color:#fff;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);padding:0.35rem 0.9rem;border-radius:999px;text-decoration:none;letter-spacing:0.02em;transition:background 0.2s;">Refund Policy</a>
+              <div
+                style="
+                  display: flex;
+                  gap: 1rem;
+                  flex-wrap: wrap;
+                  margin-top: 1rem;
+                "
+              >
+                <a
+                  href="/privacy-policy/"
+                  style="
+                    font-family: &quot;Geist&quot;, sans-serif;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    color: #fff;
+                    background: rgba(255, 255, 255, 0.12);
+                    border: 1px solid rgba(255, 255, 255, 0.25);
+                    padding: 0.35rem 0.9rem;
+                    border-radius: 999px;
+                    text-decoration: none;
+                    letter-spacing: 0.02em;
+                    transition: background 0.2s;
+                  "
+                  >Privacy Policy</a
+                >
+                <a
+                  href="/terms/"
+                  style="
+                    font-family: &quot;Geist&quot;, sans-serif;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    color: #fff;
+                    background: rgba(255, 255, 255, 0.12);
+                    border: 1px solid rgba(255, 255, 255, 0.25);
+                    padding: 0.35rem 0.9rem;
+                    border-radius: 999px;
+                    text-decoration: none;
+                    letter-spacing: 0.02em;
+                    transition: background 0.2s;
+                  "
+                  >Terms &amp; Conditions</a
+                >
+                <a
+                  href="/refund-policy/"
+                  style="
+                    font-family: &quot;Geist&quot;, sans-serif;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    color: #fff;
+                    background: rgba(255, 255, 255, 0.12);
+                    border: 1px solid rgba(255, 255, 255, 0.25);
+                    padding: 0.35rem 0.9rem;
+                    border-radius: 999px;
+                    text-decoration: none;
+                    letter-spacing: 0.02em;
+                    transition: background 0.2s;
+                  "
+                  >Refund Policy</a
+                >
               </div>
             </div>
           </div>
@@ -3017,7 +3590,10 @@ The goal was becoming the obvious choice.
                           class="f-link tg w-inline-block"
                         >
                           <div class="heading">Location</div>
-                          <div class="txt-24">801, B block, Shubh labh Hights, Robot Square Indore 452016</div>
+                          <div class="txt-24">
+                            801, B block, Shubh labh Hights, Robot Square Indore
+                            452016
+                          </div>
                         </a>
                         <a
                           f-link-wa=""
@@ -3171,7 +3747,10 @@ The goal was becoming the obvious choice.
       src="https://cdn.prod.website-files.com/gsap/3.14.2/SplitText.min.js"
       type="text/javascript"
     ></script>
-    <script src="./js/webflow.3824a8dd.5bccf44a7f2504ef.js" type="text/javascript"></script>
+    <script
+      src="./js/webflow.3824a8dd.5bccf44a7f2504ef.js"
+      type="text/javascript"
+    ></script>
     <script>
       (function () {
         "use strict";
@@ -3247,7 +3826,8 @@ The goal was becoming the obvious choice.
                   if (dest && !dest.endsWith("/") && !dest.includes(".")) {
                     dest += "/";
                   }
-                  const finalUrl = linkUrl.origin + dest + linkUrl.search + linkUrl.hash;
+                  const finalUrl =
+                    linkUrl.origin + dest + linkUrl.search + linkUrl.hash;
 
                   const pageTransition =
                     document.querySelector(".page-transition");
@@ -3338,7 +3918,10 @@ The goal was becoming the obvious choice.
               const video = entry.target;
               const tile = video.closest(".wa-video-tile");
               if (entry.isIntersecting) {
-                video.play().then(() => tile && tile.classList.add("is-playing")).catch(() => {});
+                video
+                  .play()
+                  .then(() => tile && tile.classList.add("is-playing"))
+                  .catch(() => {});
               } else {
                 video.pause();
                 if (tile) tile.classList.remove("is-playing");
@@ -3409,7 +3992,8 @@ The goal was becoming the obvious choice.
           snapTo(activeIndex + direction);
 
           const finishMove = (event) => {
-            if (event.target !== track || event.propertyName !== "transform") return;
+            if (event.target !== track || event.propertyName !== "transform")
+              return;
             track.removeEventListener("transitionend", finishMove);
 
             if (direction > 0) {
@@ -3574,7 +4158,13 @@ The goal was becoming the obvious choice.
 
           // ── Click: play in place instead of following the link out to vimeo.com ──
           card.addEventListener("click", function (e) {
-            if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
+            if (
+              e.button !== 0 ||
+              e.metaKey ||
+              e.ctrlKey ||
+              e.shiftKey ||
+              e.altKey
+            ) {
               return; // let middle/ctrl/cmd-click still open vimeo.com in a new tab
             }
             e.preventDefault();

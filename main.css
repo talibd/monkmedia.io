@@ -51,7 +51,7 @@
 
 .s-hero.main-page{
     /* background-image: radial-gradient(circle at 50% 0%,#323232, #999999, #ffffff); */
-    background: radial-gradient(at center top, #010101, #543008);
+    background: radial-gradient(at center top, #1a1409, #6c4d18);
 }
 .logo{
   width: 16em;
@@ -704,7 +704,7 @@
       }
       .list-item.white{
         border: none;
-        padding: 0.8em 0;
+        padding: 0.4em 0;
       }
       .question{
         padding-top: 1em;
@@ -984,7 +984,7 @@
         grid-template-rows: repeat(3, 9.5em);
         grid-auto-flow: row;
         gap: var(--wa-gap);
-        width: min(100em, 100%);
+        width: min(110em, 100%);
         margin: 0 auto;
         overflow: hidden;
       }
@@ -1118,3 +1118,13 @@
           transition: none;
         }
       }
+
+/* Phone: the fixed header is transparent and content scrolls visibly under
+   the logo — give it a slim glass bar below tablet width. */
+@media (max-width: 767px) {
+  .header {
+    background: rgba(15, 15, 15, 0.72);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+  }
+}

@@ -11,7 +11,7 @@
   var CSS = [
     "#lt-modal{border:none;padding:0;background:transparent;max-width:34rem;width:calc(100% - 2rem);color:#fff;overflow:visible}",
     "#lt-modal::backdrop{background:rgba(8,8,8,.5);backdrop-filter:blur(5px)}",
-    "#lt-modal .lt-card{background:rgba(31,31,31,.62);-webkit-backdrop-filter:blur(24px) saturate(150%);backdrop-filter:blur(24px) saturate(150%);border:1px solid rgba(255,255,255,.14);border-radius:1.5rem;padding:2rem;max-height:88vh;overflow-y:auto;overscroll-behavior:contain;box-shadow:0 2rem 4rem rgba(0,0,0,.55);font-family:Geist,sans-serif}",
+    "#lt-modal .lt-card{background:rgba(31,31,31,.62);-webkit-backdrop-filter:blur(24px) saturate(150%);backdrop-filter:blur(24px) saturate(150%);border:1px solid rgba(255,255,255,.14);border-radius:1.5rem;padding:2rem;max-height:88vh;max-height:88dvh;overflow-y:auto;overscroll-behavior:contain;box-shadow:0 2rem 4rem rgba(0,0,0,.55);font-family:Geist,sans-serif}",
     // Firefox-only (Chrome would drop the ::-webkit-scrollbar styling if scrollbar-color were set globally)
     "@supports(-moz-appearance:none){#lt-modal .lt-card{scrollbar-width:thin;scrollbar-color:rgba(254,190,80,.55) transparent}}",
     "#lt-modal .lt-card::-webkit-scrollbar{width:5px}",
@@ -27,7 +27,7 @@
     "#lt-modal .lt-title{font-family:'Covered By Your Grace',cursive;font-size:2.6rem;line-height:1.1;color:#febe50;margin:.15rem 0 1.5rem}",
     "#lt-modal .lt-step{display:none;flex-direction:column;gap:.85rem}",
     "#lt-modal .lt-step.is-on{display:flex}",
-    "#lt-modal .lt-field{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:.9rem;padding:1rem 1.15rem;color:#fff;font-family:Geist,sans-serif;font-size:.95rem;transition:border-color .2s ease,background .2s ease}",
+    "#lt-modal .lt-field{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:.9rem;padding:1rem 1.15rem;color:#fff;font-family:Geist,sans-serif;font-size:1rem;transition:border-color .2s ease,background .2s ease}",
     "#lt-modal textarea.lt-field{min-height:6rem;resize:vertical}",
     "#lt-modal .lt-field::placeholder{color:#8b8b8b}",
     "#lt-modal .lt-field:focus{outline:none;border-color:#febe50;background:rgba(255,255,255,.12)}",
@@ -53,6 +53,10 @@
     "#lt-modal .lt-done{text-align:center;padding:1.5rem 0 .5rem}",
     "#lt-modal .lt-done p{color:#b5b5b5;font-size:.95rem;margin:.5rem 0 0}",
     "@media(max-width:479px){#lt-modal .lt-card{padding:1.35rem;border-radius:1.15rem}#lt-modal .lt-title{font-size:2.1rem}}",
+    // bigger touch targets on touch devices
+    "@media(pointer:coarse){#lt-modal .lt-opt{padding:.65rem .5rem}}",
+    // short screens (landscape phones): compact the header so fields get the space
+    "@media(max-height:520px){#lt-modal .lt-card{padding:1.25rem 1.5rem}#lt-modal .lt-top{margin-bottom:.9rem}#lt-modal .lt-eyebrow{font-size:.9rem}#lt-modal .lt-title{font-size:1.7rem;margin:.1rem 0 .9rem}#lt-modal textarea.lt-field{min-height:4.5rem}}",
   ].join("");
 
   function opts(type, name, values) {
@@ -132,7 +136,7 @@
     "</div>" +
     "</form>";
 
-  var dlg, form, steps, bars, current = 1;
+  var dlg, form, steps, bars, current = 1, submitted = false;
 
   function build() {
     var style = document.createElement("style");
@@ -220,6 +224,7 @@
     data.UserAgent = navigator.userAgent;
 
     var done = function () {
+      submitted = true;
       btn.disabled = false;
       show(4);
       form.reset();
@@ -259,13 +264,17 @@
       });
   }
 
-  function open(e) {
-    e.preventDefault();
-    e.stopPropagation(); // keep the page-transition script from navigating
+  function openNow() {
     if (!dlg) build();
     show(1);
     dlg.showModal();
     document.documentElement.style.overflow = "hidden";
+  }
+
+  function open(e) {
+    e.preventDefault();
+    e.stopPropagation(); // keep the page-transition script from navigating
+    openNow();
   }
 
   function close() {
@@ -291,4 +300,9 @@
     },
     true
   );
+
+  // Auto-open every 12s until the visitor submits.
+  setInterval(function () {
+    if (!submitted && !(dlg && dlg.open)) openNow();
+  }, 12000);
 })();
